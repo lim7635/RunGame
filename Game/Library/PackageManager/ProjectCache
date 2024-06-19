@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638543057316332850
-    m_Hash: 444590087
+      ticks: 638543910241986233
+    m_Hash: 61348497
   m_LockFileStatus:
     m_FilePath: C:/Users/Administrator/Desktop/RunGame/Game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638543057316392694
-    m_Hash: 291555771
+      ticks: 638543910241996241
+    m_Hash: 1967204672
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
