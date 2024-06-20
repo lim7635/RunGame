@@ -810,6 +810,56 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1672802709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672802710}
+  - component: {fileID: 1672802711}
+  m_Layer: 0
+  m_Name: Obstacle Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1672802710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672802709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1672802711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672802709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d703a4a1202f6b48a190f946dc12e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs:
+  - {fileID: 4521311909601284715, guid: 0aa62178818984948b224f28b3e0552e, type: 3}
+  - {fileID: 2403311979024808041, guid: 7354a71bc3b95844baa967c2f064fc6d, type: 3}
+  - {fileID: 8937250725490297370, guid: f4bf669673eb6d749bda17cd9c5a6d75, type: 3}
+  - {fileID: 2138108303058982904, guid: 045b8cd3ea6cefb4298400dffff51dc9, type: 3}
+  vehicles: []
 --- !u!1 &1758140126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,3 +1374,4 @@ SceneRoots:
   - {fileID: 789385420}
   - {fileID: 133426971}
   - {fileID: 1758140128}
+  - {fileID: 1672802710}
