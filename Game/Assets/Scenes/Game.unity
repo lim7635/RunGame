@@ -859,7 +859,7 @@ MonoBehaviour:
   - {fileID: 2403311979024808041, guid: 7354a71bc3b95844baa967c2f064fc6d, type: 3}
   - {fileID: 8937250725490297370, guid: f4bf669673eb6d749bda17cd9c5a6d75, type: 3}
   - {fileID: 2138108303058982904, guid: 045b8cd3ea6cefb4298400dffff51dc9, type: 3}
-  vehicles: []
+  obstacleList: []
 --- !u!1 &1758140126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  sound: {fileID: 8300000, guid: 0d956348c1b1bba4ebe195b570e0ec9c, type: 3}
   roadline: 0
   positionX: 3.5
 --- !u!4 &1760974162 stripped

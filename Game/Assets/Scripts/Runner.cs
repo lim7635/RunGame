@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public enum RoadLine
@@ -12,6 +13,7 @@ public enum RoadLine
 public class Runner : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] AudioClip sound;
 
     [SerializeField] RoadLine roadline;
     [SerializeField] float positionX = 3.5f;
@@ -34,6 +36,9 @@ public class Runner : MonoBehaviour
             if (roadline != RoadLine.LEFT)
             {
                 roadline--;
+
+                SoundManager.Instance.Sound(sound);
+
                 animator.Play("Left Move");
             }
         }
@@ -43,6 +48,9 @@ public class Runner : MonoBehaviour
             if (roadline != RoadLine.RIGHT)
             {
                 roadline++;
+
+                SoundManager.Instance.Sound(sound);
+
                 animator.Play("Right Move");
             }
         }
