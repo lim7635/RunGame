@@ -38,6 +38,19 @@ public class ObstacleManager : MonoBehaviour
         }
     }
 
+    public bool ExamineActive()
+    {
+        for (int i = 0; i < obstacleList.Count; i++)
+        {
+            if (obstacleList[i].activeSelf == false)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public IEnumerator ActiveObstacle()
     {
         WaitForSeconds waitForSeconds = new WaitForSeconds(5f);
@@ -47,8 +60,17 @@ public class ObstacleManager : MonoBehaviour
             random = Random.Range(0, obstacleList.Count);
             randomPosition = Random.Range(0, activePositions.Length);
 
-            if(obstacleList[random].activeSelf == true)
+            while (obstacleList[random].activeSelf == true)
             {
+                if (ExamineActive()) // ExamineActive() == true
+                {
+                    GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
+
+                    obstacle.SetActive(false);
+
+                    obstacleList.Add(obstacle);
+                }
+
                 random = (random + 1) % obstacleList.Count;
             }
 
