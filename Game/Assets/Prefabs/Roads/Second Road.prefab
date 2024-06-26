@@ -790,6 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8392858336569858465}
   - component: {fileID: 652839907922420021}
+  - component: {fileID: 6854511514024182196}
   m_Layer: 0
   m_Name: Second Road
   m_TagString: Road
@@ -838,6 +839,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 60, y: 0.1, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6854511514024182196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3741480573678622169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f34cd4300470d408b6194784fbb8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callback:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4056529271332893713
 GameObject:
   m_ObjectHideFlags: 0
