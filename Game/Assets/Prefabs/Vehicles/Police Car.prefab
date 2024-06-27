@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6931640887762061207}
   - component: {fileID: 8278619421995465278}
+  - component: {fileID: 545300947217918731}
   m_Layer: 0
   m_Name: Back Detector
   m_TagString: Untagged
@@ -130,12 +131,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3, y: 2.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0.05}
+--- !u!114 &545300947217918731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108460273926593457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21473efe795da094cb4cd1d8dbef8376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138108303058982904
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +160,7 @@ GameObject:
   - component: {fileID: 8513877317380985072}
   - component: {fileID: 3066926387187824708}
   - component: {fileID: 1611217111296287330}
+  - component: {fileID: 7184569890912699818}
   m_Layer: 0
   m_Name: Police Car
   m_TagString: Untagged
@@ -210,8 +224,35 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 2.5, z: 6}
+  m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!54 &7184569890912699818
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138108303058982904}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &3954058072070371561
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407241768920168181}
   - component: {fileID: 7577136705440246667}
+  - component: {fileID: 811112935575973998}
   m_Layer: 0
   m_Name: Middle Detector
   m_TagString: Untagged
@@ -597,6 +639,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2.5, z: 5.2}
   m_Center: {x: 0, y: 0, z: 0.06}
+--- !u!114 &811112935575973998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360058842347726250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26cd3e0c087a64a4db2947341727c5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8872617768505824068
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8301132002954211053}
   - component: {fileID: 4041037920396923681}
+  - component: {fileID: 2212879571169656650}
   m_Layer: 0
   m_Name: Front Detector
   m_TagString: Untagged
@@ -650,3 +705,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 2.5, z: 0.47}
   m_Center: {x: 0, y: 0, z: -0.08}
+--- !u!114 &2212879571169656650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872617768505824068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850a979188efe004a8bac6089cf59f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
