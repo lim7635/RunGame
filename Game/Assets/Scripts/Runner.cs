@@ -10,6 +10,7 @@ public enum RoadLine
     RIGHT = 1
 }
 
+[RequireComponent(typeof(Rigidbody))]
 public class Runner : MonoBehaviour
 {
     [SerializeField] Animator animator;
