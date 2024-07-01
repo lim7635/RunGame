@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 
-public class ObstacleManager : MonoBehaviour
+public class ObstacleManager : State
 {
     [SerializeField] int random;
 

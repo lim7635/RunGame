@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class RoadManager : MonoBehaviour
+public class RoadManager : State
 {
     [SerializeField] List<GameObject> roads; // C++ = vector
     [SerializeField] float speed = 10.0f;
@@ -17,7 +17,9 @@ public class RoadManager : MonoBehaviour
 
     void Update()
     {
-        for(int i = 0; i < roads.Count; i++)
+        if (state == false) return;
+
+        for (int i = 0; i < roads.Count; i++)
         {
             roads[i].transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
