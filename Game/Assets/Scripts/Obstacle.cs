@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Obstacle : State, IInteractable
 {
-    [SerializeField] float speed = 5.0f;
     [SerializeField] Vector3 direction;
+    [SerializeField] float speed;
 
     public float Speed
     {
@@ -16,6 +16,8 @@ public class Obstacle : State, IInteractable
     private void OnEnable()
     {
         base.OnEnable();
+
+        speed = Random.Range(SpeedManager.Speed, SpeedManager.Speed + 5);
 
         direction = Vector3.forward;
     }

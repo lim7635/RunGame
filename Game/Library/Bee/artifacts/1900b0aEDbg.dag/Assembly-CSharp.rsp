@@ -369,6 +369,7 @@
 "Assets/Scripts/Managers/SceneController.cs"
 "Assets/Scripts/Managers/SingleTon.cs"
 "Assets/Scripts/Managers/SoundManager.cs"
+"Assets/Scripts/Managers/SpeedManager.cs"
 "Assets/Scripts/Obstacle.cs"
 "Assets/Scripts/Road.cs"
 "Assets/Scripts/Runner.cs"

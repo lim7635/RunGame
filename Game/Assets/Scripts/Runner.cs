@@ -19,7 +19,7 @@ public class Runner : State
     [SerializeField] RoadLine roadline;
     [SerializeField] RoadLine previousline;
 
-    [SerializeField] float speed = 20.0f;
+    [SerializeField] float speed = 5.0f;
     [SerializeField] float positionX = 3.5f;
 
     private void OnEnable()
@@ -32,7 +32,15 @@ public class Runner : State
     void Start()
     {
         roadline = previousline = RoadLine.MIDDLE;
+
         animator = GetComponent<Animator>();
+
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        animator.speed = SpeedManager.Speed / 20.0f;
     }
 
     void OnKeyUpdate()

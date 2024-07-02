@@ -7,12 +7,19 @@ using UnityEngine;
 public class RoadManager : State
 {
     [SerializeField] List<GameObject> roads; // C++ = vector
-    [SerializeField] float speed = 10.0f;
+    [SerializeField] float speed;
     [SerializeField] float offset = 20.0f;
 
     void Start()
     {
+        Initialize();
+
         roads.Capacity = 10;
+    }
+
+    public void Initialize()
+    {
+        speed = SpeedManager.Speed / 2;
     }
 
     void Update()

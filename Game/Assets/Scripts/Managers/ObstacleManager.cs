@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
@@ -53,7 +54,7 @@ public class ObstacleManager : State
 
     public IEnumerator ActiveObstacle()
     {
-        while (true)
+        while (state == true)
         {
             random = Random.Range(0, obstacleList.Count);
             randomPosition = Random.Range(0, activePositions.Length);
