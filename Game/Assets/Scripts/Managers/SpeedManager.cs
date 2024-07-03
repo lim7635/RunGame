@@ -25,7 +25,7 @@ public class SpeedManager : State
 
     public IEnumerator Increase()
     {
-        while (speed < limitSpeed)
+        while (speed < limitSpeed && state == true)
         {
             yield return new WaitForSeconds(2.5f);
 

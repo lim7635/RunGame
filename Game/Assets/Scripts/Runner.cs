@@ -29,7 +29,7 @@ public class Runner : State
         InputManager.Instance.keyAction += OnKeyUpdate;
     }
 
-    void Start()
+    void Awake()
     {
         roadline = previousline = RoadLine.MIDDLE;
 
