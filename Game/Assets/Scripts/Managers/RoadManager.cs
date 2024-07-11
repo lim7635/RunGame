@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoadManager : State
 {
@@ -12,8 +13,6 @@ public class RoadManager : State
 
     void Start()
     {
-        Initialize();
-
         roads.Capacity = 10;
     }
 
@@ -43,5 +42,20 @@ public class RoadManager : State
         newRoad.transform.position = new Vector3(0, 0, newZ);
 
         roads.Add(newRoad);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnsceneLoaded;
+    }
+
+    void OnsceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Initialize();
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnsceneLoaded;
     }
 }

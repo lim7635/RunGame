@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class SpeedManager : State
 {
-    [SerializeField] static float speed = 20.0f;
+    [SerializeField] static float speed;
     [SerializeField] float limitSpeed = 60.0f;
 
     [SerializeField] UnityEvent callback;
@@ -16,7 +16,7 @@ public class SpeedManager : State
         set { speed = value; }
     }
 
-    public void Start()
+    public void Awake()
     {
         speed = 20.0f;
 

@@ -10,9 +10,7 @@ public class ObstacleManager : State
 {
     [SerializeField] int random;
 
-    [SerializeField] int randomPosition;
-
-    [SerializeField] Transform [] activePositions;
+    [SerializeField] Transform activePositions;
 
     [SerializeField] GameObject [] obstaclePrefabs;
 
@@ -56,25 +54,28 @@ public class ObstacleManager : State
     {
         while (state == true)
         {
-            random = Random.Range(0, obstacleList.Count);
-            randomPosition = Random.Range(0, activePositions.Length);
-
-            while (obstacleList[random].activeSelf == true)
+            if (Random.Range(0, 2) == 1)
             {
-                if (ExamineActive()) // ExamineActive() == true
+                random = Random.Range(0, obstacleList.Count);
+
+                while (obstacleList[random].activeSelf == true)
                 {
-                    GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
+                    if (ExamineActive()) // ExamineActive() == true
+                    {
+                        GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)]);
 
-                    obstacle.SetActive(false);
+                        obstacle.SetActive(false);
 
-                    obstacleList.Add(obstacle);
+                        obstacleList.Add(obstacle);
+                    }
+
+                    random = (random + 1) % obstacleList.Count;
                 }
 
-                random = (random + 1) % obstacleList.Count;
-            }
+                obstacleList[random].SetActive(true);
 
-            obstacleList[random].SetActive(true);
-            obstacleList[random].transform.position = activePositions[randomPosition].position;
+                obstacleList[random].transform.position = activePositions.position;
+            }
 
             yield return CoroutineCache.waitForSeconds(5.0f);
         }
