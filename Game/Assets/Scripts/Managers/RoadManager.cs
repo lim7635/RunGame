@@ -43,19 +43,4 @@ public class RoadManager : State
 
         roads.Add(newRoad);
     }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnsceneLoaded;
-    }
-
-    void OnsceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Initialize();
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnsceneLoaded;
-    }
 }

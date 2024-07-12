@@ -27,12 +27,12 @@ public class SpeedManager : State
     {
         while (speed < limitSpeed && state == true)
         {
-            yield return new WaitForSeconds(2.5f);
-
             if(callback != null)
             {
                 callback.Invoke();
             }
+
+            yield return new WaitForSeconds(2.5f);
 
             speed++;
         }
